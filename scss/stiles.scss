@@ -1,0 +1,57 @@
+@import "base";
+
+
+
+
+$color-primario:rgb(132, 141, 133);
+header{
+    background-color: $color-primario;
+}
+
+
+
+/*extend  esta colocado en inicio*/
+
+.hinic{
+    @extend .h3inicio;
+    background-color: aqua;
+}
+
+/*mixin esta colocado en diseño*/
+@mixin funcion{
+    background-color: yellow;
+    color:green;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: solid black 3px;
+    text-align: center
+}
+.h3_diseño{
+    @include funcion;
+}
+/*ejemplo de maps
+
+
+
+$map: (
+    clave:valor,
+    otraclave:otrovalor
+   );
+   
+   .element:before {
+    content: map-get ($map,clave);
+   }
+
+   El resultado sera el siguiente:
+
+   .element:before {
+    content:valor;
+   }
+
+*/
+
+
+
+
+
+
